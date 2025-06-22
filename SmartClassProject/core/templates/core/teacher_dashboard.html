@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartClass - Teacher Dashboard</title>
+    <link rel="stylesheet" href="{% static 'core/css/dashboard.css' %}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Welcome, {{ request.user.username }}</h1>
+            <p class="role">Logged in as: <strong>{{ user_type }}</strong></p>
+            <a href="{% url 'logout' %}" class="logout-btn">Logout</a>
+        </header>
+
+        <main class="dashboard-main">
+            <h2>Teacher Tools</h2>
+            <ul class="features-list">
+                <li>📝 Create & Launch Live Quizzes</li>
+                <li>👩‍🏫 Manage Doubt Queue</li>
+                <li>📈 Monitor Student Engagement</li>
+                <li>📊 Access Performance Reports</li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
